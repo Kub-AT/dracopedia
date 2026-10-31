@@ -1,9 +1,7 @@
-# Dracopedia — kopia archiwalna
+# Dracopedia static archive
 
-Statyczna kopia polskiej wiki o grze RedDragon, odzyskana z Wayback Machine.
+This directory is the GitHub Pages publishing root. Open `index.html` to browse the recovered Polish RedDragon wiki or `catalog.html` for the article catalog.
 
-GitHub Pages: wybierz **Deploy from a branch**, gałąź **main**, katalog **/docs**.
+Recovered materials remain subject to their original rights. This is an unofficial, incomplete preservation copy, not a live MediaWiki installation.
 
-Odzyskano 978 artykułów. Część pozostałych haseł zawiera komunikat o braku odzyskanej treści. Poszczególne strony i zasoby mogą pochodzić z różnych lat. Jest to nieoficjalna kopia archiwalna; treść nie została wygenerowana ani uzupełniona.
-
-Oryginalna strona główna: https://web.archive.org/web/20120923042055/http://dracopedia.pl/Strona_g%C5%82%C3%B3wna
+See the repository's [README](https://github.com/Kub-AT/dracopedia#readme), [provenance notes](https://github.com/Kub-AT/dracopedia/blob/main/ARCHIVE.md), and [copyright notice](https://github.com/Kub-AT/dracopedia/blob/main/RIGHTS.md).
