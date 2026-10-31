@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"/>
+
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="MediaWiki 1.14.0" name="generator"/>
+<meta content="Eksport danych własnej koalicji,Zdolności generałów" name="keywords"/>
+
+
+
+
+<title>Eksport danych własnej koalicji – Dracopedia</title>
+<link href="../assets/css/385ab640d4a645e17ad2358a.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="../assets/css/d772d25cf18f687e3db4ff6d.css" media="print" rel="stylesheet" type="text/css"/>
+<link href="../assets/css/0bbd3c433cd4bc8d62bbaab0.css" media="screen" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+
+
+
+
+<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+
+<!-- Head Scripts -->
+
+
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Eksport_danych_własnej_koalicji skin-monobook">
+<div id="globalWrapper">
+<div id="column-content">
+<div id="content">
+<a id="top" name="top"></a>
+<h1 class="firstHeading" id="firstHeading">Eksport danych własnej koalicji</h1>
+<div id="bodyContent">
+<h3 id="siteSub">Z Dracopedia</h3>
+<div id="contentSub"></div>
+<div id="jump-to-nav">Skocz do: <a href="#column-one">nawigacji</a>, <a href="#searchInput">wyszukiwania</a></div> <!-- start content -->
+<p>Export ten podaje szczegółowe dane całej koalicji do której jesteśmy zalogowani. Dostępne z poziomu gry (po zalogowaniu) przez wywołanie <b>dragon.cgi?b=dexport</b>.
+</p>
+<table class="toc" id="toc" summary="Spis treści"><tr><td><div id="toctitle"><h2>Spis treści</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Dost.C4.99pne_parametry"><span class="tocnumber">1</span> <span class="toctext">Dostępne parametry</span></a></li>
+<li class="toclevel-1"><a href="#Lista_p.C3.B3l"><span class="tocnumber">2</span> <span class="toctext">Lista pól</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Tabela_.27Alliance.27"><span class="tocnumber">2.1</span> <span class="toctext">Tabela 'Alliance'</span></a></li>
+<li class="toclevel-2"><a href="#Tabela_.27Generals.27"><span class="tocnumber">2.2</span> <span class="toctext">Tabela 'Generals'</span></a></li>
+<li class="toclevel-2"><a href="#Tabela_.27Pacts.27"><span class="tocnumber">2.3</span> <span class="toctext">Tabela 'Pacts'</span></a></li>
+<li class="toclevel-2"><a href="#Tabele_.27Wars_declared_by_us.27_oraz_.27Wars_declared_to_us.27"><span class="tocnumber">2.4</span> <span class="toctext">Tabele 'Wars declared by us' oraz 'Wars declared to us'</span></a></li>
+<li class="toclevel-2"><a href="#Tabela_.27Alliance_Data.27"><span class="tocnumber">2.5</span> <span class="toctext">Tabela 'Alliance Data'</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<a id="Dost.C4.99pne_parametry" name="Dost.C4.99pne_parametry"></a><h2> <span class="mw-headline">Dostępne parametry</span></h2>
+<ul><li> <b>K=1</b> - otrzymamy dane wyłącznie tego księstwa na jakie jesteśmy zalogowani - pozwoli to w przypadkach gdy tylko one są potrzebne na sprawniejsze parsowanie i ominięcie kilku problemów. Nie należy jednakże używać 17 wywołań z tym parametrem, żeby wczytać całą koalicję! Przykładowe użycie eksportu z parametrem: <b>dragon.cgi?b=dexport&amp;K=1</b>.
+</li><li> <b>TO=1</b> spowoduje dodatkowo eksport Tablicy Ogłoszeń koalicji w postaci takiej jak wprowadzana jest w formularzu (bez parsowania HTML).
+</li></ul>
+<a id="Lista_p.C3.B3l" name="Lista_p.C3.B3l"></a><h2> <span class="mw-headline"> Lista pól </span></h2>
+<p>Wywołanie zwraca 6 tabel:
+</p>
+<ul><li>'Alliance' - szczegółowe informacje o państwach
+</li><li>'Generals' - informacje o generałach
+</li><li>'Pacts' - ustawione pakty
+</li><li>'Wars declared by us', 'Wars declared to us' - wojny wypowiedziane odpowiednio przez nas i nam
+</li><li>'Alliance Data' - podsumowanie informacji o koalicji
+</li></ul>
+<a id="Tabela_.27Alliance.27" name="Tabela_.27Alliance.27"></a><h3> <span class="mw-headline"> Tabela 'Alliance' </span></h3>
+<ul><li>GubId - identyfikator księstwa w bazie danych
+</li><li>Name - nazwa księstwa
+</li><li>Race - rasa, którą się gra (1-ludzie, 2-elfy, 3-krasnal, 4-hobbit, 5-gobliny, 6-ożywieńcy, 7-dżin, 8-Br-ougi, 9-olbrzymy, 10-gnomy, 11-PF) 
+</li><li>Land - ilość posiadanej ziemi 
+</li><li>LandOld - ilość ziemi w poprzednim przeliczeniu
+</li><li>Control - ilość kontrolowanej ziemi 
+</li><li>NetOld - siła księstwa w poprzednim przeliczeniu 
+</li><li>NetWorth - aktualna siła księstwa 
+</li><li>Age - wiek księstwa 
+</li><li>Gold - ilość posiadanego złota 
+</li><li>Mana - ilość posiadanej many 
+</li><li>Weap - ilość posiadanej broni 
+</li><li>Stone - ilość posiadanego kamienia 
+</li><li>Food - ilość posiadanego jedzenia 
+</li><li>Infrapoints - ilość punktów zabudowny 
+</li><li>Turn - ilość klikniętych tur 
+</li><li>MaxTurns - maksymalna ilość tur 
+</li><li>Labirynth - ilość wejść do labiryntu zapisana w systemie ósemkowym (111 100 = 51 oznacza że weszliśmy 4 razy, np. 2 razy po złoto i 2 razy po generała. 110 000 = 3 oznacza że weszliśmy tylko 2 razy po złoto) 
+</li><li>Capital - 0 oznacza że jest to zwykły księstwo, 1 oznacza że jest to księstwo Imperatora, 2 że jest to GD 
+</li><li>Popular - popularność 
+</li><li>Pop[1] - ilość chłopów w zawodzie 
+</li><li>Pop[2] - ilość kamieniarzy w zawodzie 
+</li><li>Pop[3] - ilość murarzy w zawodzie 
+</li><li>Pop[4] - ilość kupców w zawodzie 
+</li><li>Pop[5] - ilość alchemików w zawodzie 
+</li><li>Pop[6] - ilość płatnerzy w zawodzie 
+</li><li>Pop[7] - ilość druidów w zawodzie 
+</li><li>Pop[8] - ilość magów w zawodzie 
+</li><li>Pop[9] - ilość naukowców w zawodzie 
+</li><li>Pop[10] - ilość bezrobotnych 
+</li><li>NPop[1] - ilość niewyszkolonych chłopów 
+</li><li>NPop[2] - ilość niewyszkolonych kamieniarzy 
+</li><li>NPop[3] - ilość niewyszkolonych murarzy 
+</li><li>NPop[4] - ilość niewyszkolonych kupców 
+</li><li>NPop[5] - ilość niewyszkolonych alchemików 
+</li><li>NPop[6] - ilość niewyszkolonych płatnerzy 
+</li><li>NPop[7] - ilość niewyszkolonych druidów 
+</li><li>NPop[8] - ilość niewyszkolonych magów 
+</li><li>NPop[9] - ilość niewyszkolonych naukcoów 
+</li><li>Sc1 - wydajność dla chłopów
+</li><li>Sc2 - wydajność dla kamieniarzy 
+</li><li>Sc3 - wydajność dla murarzy 
+</li><li>Sc4 - wydajność dla kupców 
+</li><li>Sc5 - wydajność dla alchemików 
+</li><li>Sc6 - wydajność dla płatnerzy 
+</li><li>Sc7 - wydajność dla druidów 
+</li><li>Sc8 - wydajność dla magów 
+</li><li>Sc9 - wydajność dla naukoców 
+</li><li>Sci1 - Poziom Architektury 
+</li><li>Sci2 - Poziom Inżynierii 
+</li><li>Sci3 - Poziom Czarodziejstwa 
+</li><li>Sci4 - Poziom Treningu 
+</li><li>Sci5 - Poziom Rekrutacji 
+</li><li>Sci6 - Konstrukcja Machin Drewnianych
+</li><li>Sci7 - Zakrzywienie czasu 
+</li><li>Sci8 - 1) Osadnictwo, 2) rekultywacja, 3) Górnictwo odkrywkowe 
+</li><li>Sci9 
+</li><li>Sci10 - Wynalazczość 
+</li><li>Sci11 
+</li><li>Sci12 - Ekonoodkrycia 
+</li><li>Sci13 - Technologie broni: 1) Ostrzenie, 2) Naprawa, 3) Przekuwanie
+</li><li>Sci14 - Okultyzm
+</li><li>ArmA - żołnierze 
+</li><li>ArmB - E1 
+</li><li>ArmC - E2 
+</li><li>ArmD - smoki 
+</li><li>ArmE - złodzieje 
+</li><li>ArmF - maszyny 
+</li><li>HArmA - ilość w domu 
+</li><li>HArmB 
+</li><li>HArmC 
+</li><li>HArmD 
+</li><li>HArmE 
+</li><li>HArmF 
+</li><li>NArmA - ilość niewyszkolonych 
+</li><li>NArmB 
+</li><li>NArmC 
+</li><li>NArmE 
+</li><li>SpecialBuildings - kolejne bity oznaczają:
+</li></ul>
+<dl><dd><dl><dd>1 = Kopalnia złota 
+</dd><dd>2 = Zajazd u Czerwonego Smoka 
+</dd><dd>3 = Karczma Uniwersytecka 
+</dd><dd>4 = Szpital 
+</dd><dd>5 = Smoczy mur 
+</dd><dd>6 = Ratusz 
+</dd><dd>7 = Namiot sztabowy 
+</dd><dd>8 = Nawiedzony las 
+</dd><dd>9 = Smocza bariera 
+</dd><dd>10 = Szkoła berserkerów 
+</dd><dd>11 = Gildia złodziei 
+</dd><dd>12 = Klasztor Smoczych Mnichów 
+</dd><dd>13 = Świątynia bogactwa autora 
+</dd><dd>14 = Sieć wojennych fortec
+</dd><dd>15 = Komando 
+</dd><dd>16 = Rezydencja generała 
+</dd><dd>17 = Zamek 
+</dd><dd>18 = System jaskiń 
+</dd><dd>19 = Pospolite ruszenie 
+</dd><dd>20 = Renowacja broni 
+</dd><dd>21 = Ambulatorium polowe 
+</dd><dd>22 = Łaźnia miejska 
+</dd><dd>23 = Zachodnia wieża czasu 
+</dd><dd>24 = Ściany magiczne 
+</dd><dd>25 = Ambasada 
+</dd><dd>26 = Tajemnica tworzywa 
+</dd><dd>27 = Akwedukt 
+</dd><dd>28 = Koszary
+</dd><dd>29 = Kanalizacja 
+</dd><dd>30 = Pałac 
+</dd><dd>31 = Pałac magiczny 
+</dd><dd>32 = Port towarowy 
+</dd><dd>33 = Akademia wojskowa 
+</dd><dd>34 = Ołtarz Inicjacji 
+</dd><dd>35 = Smokodrap 
+</dd><dd>36 = Wschodnia wieża czasu 
+</dd><dd>37 = Portal 
+</dd><dd>38 = Soczewka magiczna 
+</dd><dd>39 = Skrzyżowanie szlaków handlowych 
+</dd><dd>40, 41, 42 = &lt;wolne&gt;
+</dd></dl>
+</dd></dl>
+<ul><li>BuildPoints 
+</li><li>NowBuilding 
+</li><li>Build[1] - domy 
+</li><li>Build[2] - gospodarstwa
+</li><li>Build[3] - zakłady kamieniarskie
+</li><li>Build[4] - warsztaty murarskie
+</li><li>Build[5] - targi
+</li><li>Build[6] - laboratoria alchemiczne 
+</li><li>Build[7] - zbrojownie
+</li><li>Build[8] - lasy druidów 
+</li><li>Build[9] - wieże magów 
+</li><li>Build[10] - laboratoria naukowe 
+</li><li>Build[11] - kompostowniki 
+</li><li>Build[12] - cechy kamieniarzy 
+</li><li>Build[13] - cegielnie
+</li><li>Build[14] - sklepy
+</li><li>Build[15] - cechy alchemików 
+</li><li>Build[16] - cechy płatnerzy 
+</li><li>Build[17] - świątynie
+</li><li>Build[18] - magiczne pola siłowe 
+</li><li>Build[19] - biblioteki
+</li><li>Build[20] - sady owocowe
+</li><li>Build[21] - kamieniołomy 
+</li><li>Build[22] - kopalnie diamentów 
+</li><li>Build[23] - jeziora many 
+</li><li>Build[24] - szkoły 
+</li><li>Build[25] - koszary
+</li><li>Build[26] - konstrukcje machin bojowych 
+</li><li>Build[27] - wieże obronne 
+</li><li>Build[28] - uniwersytety 
+</li><li>Build[31] - pustkowia
+</li><li>Books - 0 oznacza, że dany gub może czarować tylko na siebie, 1 oznacza, że może czarować również na innych
+</li><li>SpellCost - aktualny poziom wydatków w magii
+</li><li>Spell[1] = Szczęście 
+</li><li>Spell[2] = Pracowitość
+</li><li>Spell[3] = Szarańcza
+</li><li>Spell[4] = Plaga
+</li><li>Spell[5] = Pech
+</li><li>Spell[6] = Słabość
+</li><li>Spell[7] = Chochliki
+</li><li>Spell[8] = Lunatykowanie
+</li><li>Spell[9] = Głupota
+</li><li>Spell[10] = FLuidum magiczne
+</li><li>Spell[11] = Dobry humor
+</li><li>Spell[12] = Zły humor
+</li></ul>
+<p>(pola dodane 22 maja 2008):
+</p>
+<ul><li>Plat - pensje
+</li><li>SetSc - flagi odkrywania w zawodach
+</li><li>LandDiv - ziemia oddawana do puli
+</li><li>DivProd - udział budulca w produkcji kamieniarzy
+</li></ul>
+<p>(pole dodane 15 stycznia 2011):
+</p>
+<ul><li>Sh - 1 jeżeli jest to rasa Sh, 0 w przeciwnym wypadku
+</li></ul>
+<a id="Tabela_.27Generals.27" name="Tabela_.27Generals.27"></a><h3> <span class="mw-headline"> Tabela 'Generals' </span></h3>
+<ul><li>GubId - identyfikator księstwa w bazie danych
+</li><li>Name - imię generała
+</li><li>Pri - umiejętność główna (0- S; 1- Ob; 2- M; 3- Z; 4- K; 5- P; 6- N)
+</li><li>Sec - <a href="Zdolno%C5%9Bci_genera%C5%82%C3%B3w-cbf6db7f90c6.html" title="Zdolności generałów">umiejętność drugorzędna</a>
+</li></ul>
+<dl><dd><dl><dd>0 - ZG; 1 - ZS; 2 - PiZ; 3 - Kontr; 4 - Kos;
+</dd><dd>5 - ML; 6 - ZiS; 7 - BM; 8 - P; 9 - ZKiS;
+</dd><dd>10 - Op; 15 - T; 16 - Bad; 17 - Prz; 18 - CM;
+</dd><dd>19 - W; 20 - Sam; 21 - Stu; 22 - HS;
+</dd></dl>
+</dd></dl>
+<ul><li>Level - poziom generała
+</li><li>Wound - na ile dni generał jest zraniony (0 dla zdrowych)
+</li><li>IsHome - czy jest w domu ('0' jeśli wyszedł, '1' gdy w domu)
+</li></ul>
+<a id="Tabela_.27Pacts.27" name="Tabela_.27Pacts.27"></a><h3> <span class="mw-headline"> Tabela 'Pacts' </span></h3>
+<ul><li>GubId - identyfikator księstwa w bazie danych
+</li><li>What - rodzaj paktu (2 - wojskowy; 3 - magiczny; 4 - złodziejski)
+</li><li>Who - identyfikator księstwa z którym jest pakt
+</li><li>Active -
+</li></ul>
+<a id="Tabele_.27Wars_declared_by_us.27_oraz_.27Wars_declared_to_us.27" name="Tabele_.27Wars_declared_by_us.27_oraz_.27Wars_declared_to_us.27"></a><h3> <span class="mw-headline"> Tabele 'Wars declared by us' oraz 'Wars declared to us' </span></h3>
+<ul><li>GroupId - identyfikator koalicji
+</li><li>Name - nazwa koalicji
+</li></ul>
+<a id="Tabela_.27Alliance_Data.27" name="Tabela_.27Alliance_Data.27"></a><h3> <span class="mw-headline"> Tabela 'Alliance Data' </span></h3>
+<ul><li>GroupId - identyfikator koalicji
+</li><li>Name - nazwa
+</li><li>Gubs - ilość księstw
+</li><li>Land - powierzchnia
+</li><li>Power - moc
+</li><li>LJPProc - procent wybudowanego PSO z przeliczenia
+</li></ul>
+<!-- 
+NewPP limit report
+Preprocessor node count: 8/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<!-- Saved in parser cache with key wikidb-pl_:pcache:idhash:456-0!1!0!!pl!2!edit=0 and timestamp 20111208233411 -->
+<div class="printfooter">
+Źródło „<a href="Eksport_danych_w%C5%82asnej_koalicji-a0c76934d831.html">http://dracopedia.pl/Eksport_danych_w%C5%82asnej_koalicji</a>”</div>
+<div class="catlinks" id="catlinks"><div id="mw-normal-catlinks"><a href="../catalog.html" title="Specjalna:Kategorie">Kategoria</a>: <span dir="ltr"><a href="Kategoria_Tworzenie_w%C5%82asnych_dodatk%C3%B3w-8588fb229773.html" title="Kategoria:Tworzenie własnych dodatków">Tworzenie własnych dodatków</a></span></div></div> <!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+<div id="column-one">
+<div class="portlet" id="p-cactions">
+<h5>Widok</h5>
+<div class="pBody">
+<ul>
+<li class="selected" id="ca-nstab-main"><a accesskey="c" href="Eksport_danych_w%C5%82asnej_koalicji-a0c76934d831.html" title="Zobacz stronę treści [c]">Strona</a></li>
+<li class="new" id="ca-talk"><a accesskey="t" href="../catalog.html" title="Dyskusja o zawartości tej strony. [t]">Dyskusja</a></li>
+<li id="ca-viewsource"><a accesskey="e" href="../catalog.html" title="Ta strona jest zabezpieczona. Możesz zobaczyć tekst źródłowy. [e]">Tekst źródłowy</a></li>
+<li id="ca-history"><a accesskey="h" href="../catalog.html" title="Starsze wersje tej strony. [h]">Historia i autorzy</a></li> </ul>
+</div>
+</div>
+<div class="portlet" id="p-personal">
+<h5>Osobiste</h5>
+<div class="pBody">
+<ul>
+<li id="pt-login"><a accesskey="o" href="../catalog.html" title="Zachęcamy do zalogowania się, choć nie jest to obowiązkowe. [o]">Zaloguj się</a></li>
+</ul>
+</div>
+</div>
+<div class="portlet" id="p-logo">
+<a accesskey="z" href="Strona_g%C5%82%C3%B3wna-f030e46f01fb.html" style='background-image: url("../assets/images/7589e7fb5b1ef45343c91bad.png");' title="Zobacz stronę główną [z]"></a>
+</div>
+
+<div class="generated-sidebar portlet" id="p-navigation">
+<h5>Nawigacja</h5>
+<div class="pBody">
+<ul>
+<li id="n-mainpage"><a accesskey="z" href="Strona_g%C5%82%C3%B3wna-f030e46f01fb.html" title="Zobacz stronę główną [z]">Strona główna</a></li>
+<li id="n-recentchanges"><a accesskey="r" href="../catalog.html" title="Lista ostatnich zmian na Dracopedia. [r]">Ostatnie zmiany</a></li>
+<li id="n-randompage"><a accesskey="x" href="../catalog.html" title="Pokaż stronę wybraną losowo [x]">Losuj stronę</a></li>
+</ul>
+</div>
+</div>
+<div class="generated-sidebar portlet" id="p-Kategorie">
+<h5>Kategorie</h5>
+<div class="pBody">
+<ul>
+<li id="n-Poradniki"><a href="Kategoria_Poradniki-28aa7102ba64.html">Poradniki</a></li>
+<li id="n-Zak.C5.82adki"><a href="Kategoria_Zak%C5%82adki-7d7db868d46c.html">Zakładki</a></li>
+<li id="n-Zawody"><a href="Kategoria_Zawody-94698ca0ca4a.html">Zawody</a></li>
+<li id="n-Poj.C4.99cia"><a href="Kategoria_Poj%C4%99cia-07598e150155.html">Pojęcia</a></li>
+<li id="n-Budynki-Specjalne"><a href="Kategoria_Budynki_Specjalne-a91caab280fa.html">Budynki Specjalne</a></li>
+<li id="n-Nauka"><a href="Kategoria_Nauka-c83e0fa6ca34.html">Nauka</a></li>
+<li id="n-Rasy"><a href="Kategoria_Rasy-8675e7bd911e.html">Rasy</a></li>
+<li id="n-Genera.C5.82owie"><a href="Kategoria_Genera%C5%82owie-48050694189d.html">Generałowie</a></li>
+<li id="n-Akcje-z.C5.82odziejskie"><a href="Kategoria_Akcje_z%C5%82odziejskie-0801d5549d10.html">Akcje złodziejskie</a></li>
+<li id="n-Czary"><a href="Kategoria_Czary-9e7d31a11b2b.html">Czary</a></li>
+<li id="n-Programy-i-dodatki"><a href="Kategoria_Programy_i_dodatki-da484109dded.html">Programy i dodatki</a></li>
+</ul>
+</div>
+</div>
+<div class="portlet" id="p-search">
+<h5><label for="searchInput">Szukaj</label></h5>
+<div class="pBody" id="searchBody">
+<form action="../catalog.html" id="searchform" method="get"><div>
+<input accesskey="f" id="searchInput" name="search" title="Przeszukaj Dracopedia [f]" type="text" value=""/>
+<input class="searchButton" id="searchGoButton" name="go" title="Przejdź do strony o dokładnie takim tytule, o ile istnieje" type="submit" value="Przejdź"/> 
+				<input class="searchButton" id="mw-searchButton" name="fulltext" title="Szukaj wprowadzonego tekstu w treści stron" type="submit" value="Szukaj"/>
+</div></form>
+</div>
+</div>
+<div class="portlet" id="p-tb">
+<h5>Narzędzia</h5>
+<div class="pBody">
+<ul>
+<li id="t-whatlinkshere"><a accesskey="j" href="../catalog.html" title="Pokaż listę wszystkich stron linkujących do tej strony [j]">Linkujące</a></li>
+<li id="t-recentchangeslinked"><a accesskey="k" href="../catalog.html" title="Ostatnie zmiany w stronach, do których ta strona linkuje [k]">Zmiany w dolinkowanych</a></li>
+<li id="t-specialpages"><a accesskey="q" href="../catalog.html" title="Lista wszystkich specjalnych stron [q]">Strony specjalne</a></li>
+<li id="t-print"><a accesskey="p" href="../catalog.html" title="Wersja do wydruku [p]">Wersja do druku</a></li> <li id="t-permalink"><a href="../catalog.html" title="Stały link do tej wersji strony">Link do tej wersji</a></li> </ul>
+</div>
+</div>
+<div id="p-buttons">
+<a href="http://www.reddragon.pl" target="_blank" title="gra">
+<img alt="gra"/></a>
+<a href="http://tools4games.info" target="_blank" title="t4g">
+<img alt="t4g"/></a>
+<a href="http://top50.com.pl" target="_blank" title="gry">
+<img alt="gry"/></a>
+</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img alt="Powered by MediaWiki" src="../assets/images/7a80aa88445cbd7977b4d10d.png"/></a></div>
+<ul id="f-list">
+<li id="lastmod"> Tę stronę ostatnio zmodyfikowano 18:06, 2 paź 2011.</li>
+<li id="viewcount">Tę stronę obejrzano 2 854 razy.</li>
+<li id="privacy"><a href="Dracopedia_Zasady_ochrony_prywatno%C5%9Bci-e0c1d18fc348.html" title="Dracopedia:Zasady ochrony prywatności">Zasady ochrony prywatności</a></li>
+<li id="about"><a href="Dracopedia_O_Dracopedia-e4bfa488a76c.html" title="Dracopedia:O Dracopedia">O Dracopedia</a></li>
+<li id="disclaimer"><a href="Dracopedia_Informacje_prawne-a0c09576f6ac.html" title="Dracopedia:Informacje prawne">Informacje prawne</a></li>
+</ul>
+</div>
+</div>
+
+<!-- Served in 0.404 secs. --></body></html>

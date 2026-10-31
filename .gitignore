@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+output/dracopedia/.state/
+archive-night.log
+archive-night.pid
+_site/

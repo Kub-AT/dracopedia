@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"/>
+
+<meta content="Eksport wieści własnej koalicji" name="keywords"/>
+
+
+<title>Eksport wieści własnej koalicji - Dracopedia</title>
+<style media="screen, projection" type="text/css">/*<![CDATA[*/
+			@import "data:,";
+			@import "data:,";
+		/*]]>*/</style>
+
+<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/monobook/IE50Fixes.css?97";</style><![endif]-->
+<!--[if IE 5.5000]><style type="text/css">@import "/skins/monobook/IE55Fixes.css?97";</style><![endif]-->
+<!--[if IE 6]><style type="text/css">@import "/skins/monobook/IE60Fixes.css?97";</style><![endif]-->
+<!--[if IE 7]><style type="text/css">@import "/skins/monobook/IE70Fixes.css?97";</style><![endif]-->
+<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?97"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+
+
+<style type="text/css">/*<![CDATA[*/
+@import "data:,";
+@import "data:,";
+@import "data:,";
+/*]]>*/</style>
+<!-- Head Scripts -->
+
+</head>
+<body class="mediawiki ns-0 ltr page-Eksport_wieści_własnej_koalicji">
+<div id="globalWrapper">
+<div id="column-content">
+<div id="content">
+<a id="top" name="top"></a>
+<h1 class="firstHeading">Eksport wieści własnej koalicji</h1>
+<div id="bodyContent">
+<h3 id="siteSub">Dracopedia</h3>
+<div id="contentSub">(Przekierowano z <a href="Eksport_wie_%C5%9Bci_w%C5%82asnej_koalicji-2f256e15edb5.html" title="Eksport wieści własnej koalicji">Eksport wieści własnej koalicji</a>)</div>
+<div id="jump-to-nav">Skocz do: <a href="#column-one">nawigacji</a>, <a href="#searchInput">wyszukiwania</a></div> <!-- start content -->
+<p>Dostępne z poziomu gry (po zalogowaniu) przez wywołanie dragon.cgi?b=nexport .
+Dodatkowo do wywołania można dodać parametr time=x, pozwalający uzyskać wieści z od 1 do 5 dni wstecz.
+</p>
+<a name="Lista_p.C3.B3l"></a><h2> <span class="mw-headline">Lista pól</span></h2>
+<ul><li>ReaderId
+</li><li>SenderId
+</li><li>SenderName
+</li><li>TargetId
+</li><li>TargetName
+</li><li>Type - 1 złodzieje, 2 magia, 3 wojsko
+</li><li>Subtype - podtyp dla złodziei i magii oznaczający numer akcji / czaru
+</li><li>Success - 1 dla udanej
+</li><li>Data - pozostałe dane akcji opisane w tagach
+</li></ul>
+<a name="Og.C3.B3lne_zasady_nazewnictwa_tag.C3.B3w"></a><h2> <span class="mw-headline">Ogólne zasady nazewnictwa tagów</span></h2>
+<dl><dd>tagi są opcjonalne (nie muszą występować)
+</dd><dd>mają format: |nazwatagu1=wartość|nazwatagu1=wartość
+</dd><dd>kill, lost, steal, spy... przedrostki rodzaju informacji, wspólne dla kolejnych danych
+</dd><dd>oznaczenia budynków, wojska, zawodów są takie same jak w eksporcie danych
+</dd><dd>ArmA, B, C - elita 0, elita 1, elita 2
+</dd><dd>ArmD - smoki
+</dd><dd>ArmE - złodzieje
+</dd><dd>ArmF - machiny
+</dd><dd>Army - żołnierze czyli e0, e1 i e2 razem
+</dd><dd>Ppl - ludzie razem
+</dd><dd>PplA do I - zawody kolejno
+</dd><dd>S i D - przedrostki dla działania stratega i obrońcy (albo generałów z odpowiednimi drugorzędnymi)
+</dd></dl>
+<a name="Lista_tag.C3.B3w"></a><h2> <span class="mw-headline"> Lista tagów </span></h2>
+<ul><li>TBlockM - wieże zablokowały machin 
+</li><li>TKillM - zabiły 
+</li><li>Massacre - atak za słaby skończył się masakrą 
+</li><li>SDark - działał generał czarna magia 
+</li><li>KillGenP - generał zabity, jego rodzaj (primary) 
+</li><li>KillGenS - zdolność (secondary) 
+</li><li>KillGenL - level 
+</li><li>KillGenN - nazwa 
+</li><li>KillGenR3 - krasnolud jednak nie zginął 
+</li><li>KillGenR6 - necro stał się Kościejem 
+</li><li>WoundGenP - generał ranny 
+</li><li>WoundGenS 
+</li><li>WoundGenL 
+</li><li>WoundGenN 
+</li><li>KillGold 
+</li><li>KillFood 
+</li><li>KillWeap 
+</li><li>KillStone 
+</li><li>KillMana 
+</li><li>SpyPType - typ paktu 
+</li><li>SpyPWho - id księstwa paktu 
+</li><li>LostArmA 
+</li><li>LostArmB 
+</li><li>LostArmC 
+</li><li>LostArmD 
+</li><li>LostArmF 
+</li><li>KillArmy 
+</li><li>KillArmD 
+</li><li>KillArmF 
+</li><li>DKillArmy - kontratak 
+</li><li>DKillArmD 
+</li><li>DKillArmF 
+</li><li>DKKillArmD - ZS w obronie 
+</li><li>SKillArmD - ZS w ataku 
+</li><li>SKillBuild - PiZ 
+</li><li>SKillSpec - PiZ 
+</li><li>KillBuild 
+</li><li>MKillBuild - maszyny 
+</li><li>MKillSpec 
+</li><li>KillPpl 
+</li><li>SKillPpl - ZkiS 
+</li><li>LandLost - strata ziemi 
+</li><li>LandGain - zysk 
+</li><li>BuildGain - budynki na zdobytej ziemi 
+</li><li>LandGTot - zysk z ataku dla koalicji 
+</li><li>LandGOth - inni atakerzy wzięli łącznie 
+</li><li>LandGPool - do puli 
+</li><li>KillPplH - wymordowani magowie 
+</li><li>StealGold 
+</li><li>StealFood 
+</li><li>StealWeap 
+</li><li>StealStone 
+</li><li>StealMana 
+</li><li>StealPpl 
+</li><li>SpyArmA 
+</li><li>SpyArmB 
+</li><li>SpyArmC 
+</li><li>SpyArmD 
+</li><li>SpyArmE 
+</li><li>SpyArmF 
+</li><li>SpyBuild27 - wyszpiegowane wieże 
+</li><li>SpyPplA 
+</li><li>SpyPplB 
+</li><li>SpyPplC 
+</li><li>SpyPplD 
+</li><li>SpyPplE 
+</li><li>SpyPplF 
+</li><li>SpyPplG 
+</li><li>SpyPplH 
+</li><li>SpyPplI 
+</li><li>SpyTurns 
+</li><li>SpyBld1 - wyszpiegowane domy 
+</li><li>SpyLFr - wyszpiegowana niezabudowana ziemia 
+</li><li>KillBld27 - zniszczone wieże 
+</li><li>KillBld1 - zniszczone domy 
+</li><li>LostArmE 
+</li><li>KillArmE
+</li><li>GangArmE - zabici złodzieje w wyniku akcji Wojna Gangów 
+</li><li>DrArmA - upici 
+</li><li>DrArmB 
+</li><li>DrArmC 
+</li><li>KillPop 
+</li><li>SpyGenP - wyśledzony generał 
+</li><li>SpyGenS 
+</li><li>SpyGenL 
+</li><li>SpyGenN 
+</li><li>KillSpec - zniszczony budynek specjalny 
+</li><li>NoSpec - nie było go już 
+</li><li>FailSpec - złodzieje nie podołali budynkowi specjalnemu 
+</li><li>KillInfra - zniszczone zabudowania 
+</li><li>OOArmA - orle oko 
+</li><li>OOArmB 
+</li><li>OOArmC 
+</li><li>OOArmD 
+</li><li>OOArmE 
+</li><li>OOArmF 
+</li><li>OOPpl 
+</li><li>OOPplH 
+</li><li>MKillArmD - moździerze zabiły smoków 
+</li><li>BOF - Kula Ognia 
+</li><li>BOFNoSpec - nie było speca 
+</li><li>BOFBounce - odbiła się 
+</li><li>BOFKillSpec - zniszczyła 
+</li><li>BOFCrash - rozbiłą się 
+</li><li>WRaid - akcja była dzikim rajdem 
+</li><li>Recon - akcja była zwiadem
+</li></ul>
+<!-- Saved in parser cache with key wikidb-pl_:pcache:idhash:457-0!1!0!!pl!2!edit=0 and timestamp 20080925185930 -->
+<div class="printfooter">
+Źródło: "<a href="Eksport_wie%C5%9Bci_w%C5%82asnej_koalicji-d139ac370add.html">http://dracopedia.pl/Eksport_wie%C5%9Bci_w%C5%82asnej_koalicji</a>"</div>
+<div id="catlinks"><p class="catlinks"><a href="../catalog.html" title="Specjalna:Categories">Kategoria</a>: <span dir="ltr"><a href="Kategoria_Tworzenie_w%C5%82asnych_dodatk%C3%B3w-8588fb229773.html" title="Kategoria:Tworzenie własnych dodatków">Tworzenie własnych dodatków</a></span></p></div> <!-- end content -->
+<div class="visualClear"></div>
+</div>
+</div>
+</div>
+<div id="column-one">
+<div class="portlet" id="p-cactions">
+<h5>Widok</h5>
+<div class="pBody">
+<ul>
+<li class="selected" id="ca-nstab-main"><a accesskey="c" href="Eksport_wie%C5%9Bci_w%C5%82asnej_koalicji-d139ac370add.html" title="Zobacz stronę artykułu [c]">Artykuł</a></li>
+<li class="new" id="ca-talk"><a accesskey="t" href="../catalog.html" title="Dyskusja o zawartości tej strony. [t]">Dyskusja</a></li>
+<li id="ca-viewsource"><a accesskey="e" href="../catalog.html" title="Ta strona jest zabezpieczona. Możesz zobaczyć tekst źródłowy. [e]">Tekst źródłowy</a></li>
+<li id="ca-history"><a accesskey="h" href="../catalog.html" title="Starsze wersje tej strony. [h]">Historia</a></li>
+</ul>
+</div>
+</div>
+<div class="portlet" id="p-personal">
+<h5>Osobiste</h5>
+<div class="pBody">
+<ul>
+<li id="pt-login"><a accesskey="o" href="../catalog.html" title="Zachęcamy do zalogowania się, choć nie jest to obowiązkowe. [o]">Logowanie / rejestracja</a></li>
+</ul>
+</div>
+</div>
+<div class="portlet" id="p-logo">
+<a accesskey="z" href="Strona_g%C5%82%C3%B3wna-f030e46f01fb.html" style='background-image: url("../assets/images/7589e7fb5b1ef45343c91bad.png");' title="Zobacz stronę główną [z]"></a>
+</div>
+
+<div class="portlet" id="p-navigation">
+<h5>Nawigacja</h5>
+<div class="pBody">
+<ul>
+<li id="n-mainpage"><a accesskey="z" href="Strona_g%C5%82%C3%B3wna-f030e46f01fb.html" title="Zobacz stronę główną [z]">Strona główna</a></li>
+<li id="n-recentchanges"><a accesskey="r" href="../catalog.html" title="Lista ostatnich zmian na wiki [r]">Ostatnie zmiany</a></li>
+<li id="n-randompage"><a accesskey="x" href="../catalog.html" title="Pokaż losowo wybraną stronę [x]">Losuj stronę</a></li>
+</ul>
+</div>
+</div>
+<div class="portlet" id="p-Kategorie">
+<h5>Kategorie</h5>
+<div class="pBody">
+<ul>
+<li id="n-Poradniki"><a href="Kategoria_Poradniki-28aa7102ba64.html">Poradniki</a></li>
+<li id="n-Zak.C5.82adki"><a href="Kategoria_Zak%C5%82adki-7d7db868d46c.html">Zakładki</a></li>
+<li id="n-Zawody"><a href="Kategoria_Zawody-94698ca0ca4a.html">Zawody</a></li>
+<li id="n-Poj.C4.99cia"><a href="Kategoria_Poj%C4%99cia-07598e150155.html">Pojęcia</a></li>
+<li id="n-Budynki-Specjalne"><a href="Kategoria_Budynki_Specjalne-a91caab280fa.html">Budynki Specjalne</a></li>
+<li id="n-Nauka"><a href="Kategoria_Nauka-c83e0fa6ca34.html">Nauka</a></li>
+<li id="n-Rasy"><a href="Kategoria_Rasy-8675e7bd911e.html">Rasy</a></li>
+<li id="n-Genera.C5.82owie"><a href="Kategoria_Genera%C5%82owie-48050694189d.html">Generałowie</a></li>
+<li id="n-Akcje-z.C5.82odziejskie"><a href="Kategoria_Akcje_z%C5%82odziejskie-0801d5549d10.html">Akcje złodziejskie</a></li>
+<li id="n-Czary"><a href="Kategoria_Czary-9e7d31a11b2b.html">Czary</a></li>
+<li id="n-Programy-i-dodatki"><a href="Kategoria_Programy_i_dodatki-da484109dded.html">Programy i dodatki</a></li>
+</ul>
+</div>
+</div>
+<div class="portlet" id="p-search">
+<h5><label for="searchInput">Szukaj</label></h5>
+<div class="pBody" id="searchBody">
+<form action="../catalog.html" id="searchform" method="get"><div>
+<input accesskey="f" id="searchInput" name="search" title="Przeszukaj serwis Dracopedia [f]" type="text" value=""/>
+<input class="searchButton" id="searchGoButton" name="go" type="submit" value="Przejdź"/> 
+				<input class="searchButton" id="mw-searchButton" name="fulltext" type="submit" value="Szukaj"/>
+</div></form>
+</div>
+</div>
+<div class="portlet" id="p-tb">
+<h5>Narzędzia</h5>
+<div class="pBody">
+<ul>
+<li id="t-whatlinkshere"><a accesskey="j" href="../catalog.html" title="Pokaż listę stron linkujących do tego artykułu [j]">Linkujące</a></li>
+<li id="t-recentchangeslinked"><a accesskey="k" href="../catalog.html" title="Ostatnie zmiany w stronach linkujących do tej strony [k]">Zmiany w dolinkowanych</a></li>
+<li id="t-upload"><a accesskey="u" href="../catalog.html" title="Wyślij plik na serwer [u]">Prześlij plik</a></li>
+<li id="t-specialpages"><a accesskey="q" href="../catalog.html" title="Lista wszystkich specjalnych stron [q]">Strony specjalne</a></li>
+<li id="t-print"><a accesskey="p" href="../catalog.html" title="Wersja do wydruku [p]">Wersja do druku</a></li> <li id="t-permalink"><a href="../catalog.html" title="Permanent link to this version of the page">Bezpośredni link</a></li> </ul>
+</div>
+</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img alt="Powered by MediaWiki" src="../assets/images/7a80aa88445cbd7977b4d10d.png"/></a></div>
+<ul id="f-list">
+<li id="lastmod"> Tę stronę ostatnio zmodyfikowano 09:45, 9 lip 2008.</li>
+<li id="viewcount">Tę stronę obejrzano 320 razy.</li>
+<li id="privacy"><a href="Dracopedia_Zasady_ochrony_prywatno%C5%9Bci-e0c1d18fc348.html" title="Dracopedia:Zasady ochrony prywatności">Zasady ochrony prywatności</a></li>
+<li id="about"><a href="Dracopedia_O_serwisie-8aaac0042222.html" title="Dracopedia:O serwisie">O serwisie Dracopedia</a></li>
+<li id="disclaimer"><a href="Dracopedia_Informacje_prawne-a0c09576f6ac.html" title="Dracopedia:Informacje prawne">Informacje prawne</a></li>
+</ul>
+</div>
+
+</div>
+<!-- Served in 0.592 secs. --><!-- Debug output:
+Unstubbing $wgParser on call of $wgParser-&gt;_unstub from wfSetupParserFunctions
+Unstubbing $wgContLang on call of $wgContLang-&gt;getMagic from MagicWord::load
+Language::loadLocalisation(): got localisation for pl from source
+Language::loadLocalisation(): got localisation for en from source
+Unstubbing $wgUser on call of $wgUser-&gt;isLoggedIn from wfEditSimilarSetup
+Fully initialised
+Unstubbing $wgLoadBalancer on call of $wgLoadBalancer-&gt;getConnection from wfGetDB
+IP: 209.234.171.40
+Unstubbing $wgMessageCache on call of $wgMessageCache-&gt;getTransform from wfMsgGetKey
+Unstubbing $wgLang on call of $wgLang-&gt;getCode from MessageCache::get
+MessageCache::load(): got from global cache
+OutputPage::checkLastModified: client did not send If-Modified-Since header
+Article::tryFileCache(): not cacheable
+Article::view using parser cache: yes
+Trying parser cache wikidb-pl_:pcache:idhash:457-0!1!0!!pl!2!edit=0
+Found.
+
+-->
+</body></html>
