@@ -12,7 +12,7 @@ This project does not assert that Dracopedia was licensed under Creative Commons
 
 ## New archive presentation
 
-The catalog layout, missing-content notices, `docs/assets/css/archive-pages.css`, and `docs/assets/js/archive-catalog.js` were added for this static copy. They are distinct from original wiki content. This repository currently grants no project-wide license; no new open-source license has been selected for these additions.
+The recovery scripts (`archive_dracopedia.py` and `special_pages.py`), repository documentation, catalog layout, missing-content notices, `docs/assets/css/archive-pages.css`, and `docs/assets/js/archive-catalog.js` were added for this static copy. They are distinct from original wiki content. This repository currently grants no project-wide license; no new open-source license has been selected for these additions.
 
 ## Names and affiliation
 

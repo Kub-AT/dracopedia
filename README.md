@@ -33,12 +33,15 @@ Then visit `http://localhost:8000`. Browsing the copy does not require the origi
 | `docs/catalog.html` | Searchable catalog of recovered pages |
 | `docs/assets/` | Recovered assets and new helper-page CSS/JavaScript |
 | `docs/archive-manifest.json` | Page-level source URLs, requested captures, and recovery status |
+| `archive_dracopedia.py` | Resumable Wayback recovery crawler |
+| `special_pages.py` | Helper-page generator and static search assets |
+| [RECOVERY.md](RECOVERY.md) | Running, resuming, and reviewing a recovery |
 | [ARCHIVE.md](ARCHIVE.md) | Sources, recovery process, modifications, and limitations |
 | [RIGHTS.md](RIGHTS.md) | Attribution, copyright status, and rights inquiries |
 | [LICENSE.md](LICENSE.md) | Licensing notice; archived material is not relicensed |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Reporting errors and contributing archival evidence |
 
-The crawler, its response cache, local database, and machine logs are not included in this repository. No AI service or API is used when browsing the published archive.
+The crawler and helper-page generator are included; see [RECOVERY.md](RECOVERY.md) to run or resume a recovery. Response caches, local databases, generated working output, and machine logs remain outside version control. No AI service or API is used to run the tools or browse the published archive.
 
 ## GitHub Pages
 
