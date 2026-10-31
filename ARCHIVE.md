@@ -3,7 +3,8 @@
 ## Historical source
 
 - Original site: `http://dracopedia.pl/`, including HTTPS and `www` variants.
-- Subject: the Polish RedDragon community wiki.
+- Subject: Dracopedia, the Polish-only community wiki for **RedDragon.pl** (also known as **RD** or **RD.pl**).
+- Scope: the Polish edition; the Czech and Hungarian editions of RedDragon are outside this archive’s coverage.
 - Recovery starting point: [Wayback capture of the main page, 23 September 2012](https://web.archive.org/web/20120923042055/http://dracopedia.pl/Strona_g%C5%82%C3%B3wna).
 - Recovery performed: 30–31 October 2026.
 - Historical captures supplied by the Internet Archive's Wayback Machine.

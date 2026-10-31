@@ -1,10 +1,12 @@
 # Dracopedia Archive
 
-A static preservation copy of **Dracopedia**, the former Polish community wiki about the browser strategy game **RedDragon**.
+A static preservation copy of **Dracopedia**, the former Polish community wiki about the Polish edition of the browser strategy game **RedDragon.pl**, also known as **RD** or **RD.pl**.
 
 **[Browse the archive](https://kub-at.github.io/dracopedia/)** · **[Article catalog](https://kub-at.github.io/dracopedia/catalog.html)**
 
 This project preserves historical game knowledge that was published at `dracopedia.pl`: races, buildings, magic, warfare, guides, community pages, and related material. It is an unofficial historical archive, maintained independently of the original wiki, the game's operators, and the Internet Archive.
+
+RedDragon also had Czech and Hungarian editions. **Dracopedia covered the Polish edition only**, and this repository preserves that Polish wiki; it does not archive the Czech or Hungarian communities’ documentation.
 
 ## What is preserved
 

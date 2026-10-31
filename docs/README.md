@@ -1,6 +1,8 @@
 # Dracopedia static archive
 
-This directory is the GitHub Pages publishing root. Open `index.html` to browse the recovered Polish RedDragon wiki or `catalog.html` for the article catalog.
+This directory is the GitHub Pages publishing root. Open `index.html` to browse the recovered Polish wiki for **RedDragon.pl** (also known as **RD** or **RD.pl**) or `catalog.html` for the article catalog.
+
+Dracopedia covered the Polish edition only, rather than the Czech or Hungarian editions of RedDragon.
 
 Recovered materials remain subject to their original rights. This is an unofficial, incomplete preservation copy, not a live MediaWiki installation.
 
