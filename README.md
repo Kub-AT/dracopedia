@@ -10,7 +10,7 @@ This project preserves historical game knowledge that was published at `dracoped
 
 The initial recovery accepted **978 archived HTML pages**, alongside **6 recovered wiki stylesheets and 25 images**. These are recovery counts, not a guarantee of 978 distinct, complete articles: aliases, wiki stubs, and administrative or community pages are included. Some links lead to clearly marked missing-content notices.
 
-Pages were recovered from different Wayback Machine capture dates. The result is a collection of historical material, not a consistent snapshot of the wiki on one date. Article text remains in Polish.
+**Articles may come from different points in time.** Each page was recovered from an available Wayback Machine capture, so one article may reflect the game in 2008 while another reflects 2012 or 2015. They may describe different versions of the game rules, and details can contradict one another. This archive preserves the material that could be recovered; it does not represent the state of the entire wiki on any single date. Images and stylesheets may also come from different dates than their articles. Article text remains in Polish.
 
 The archive includes local navigation between pages, recovered MediaWiki/Monobook presentation, a full-text searchable article catalog, random article navigation, and explanatory pages for content that could not be recovered. Newly written helper pages are explicitly marked **Kopia archiwalna · strona pomocnicza**.
 
