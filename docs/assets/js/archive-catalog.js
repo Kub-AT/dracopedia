@@ -11,6 +11,24 @@ if (input) {
     item.append(snippet);
     return {item, title:normalize(link.textContent), text, normalized:normalize(text), snippet};
   });
+
+  // Reuse the search index; aliases must not bias the random selection.
+  const params = new URLSearchParams(location.search);
+  if (params.get('random') === '1') {
+    const candidates = new Map();
+    for (const record of items) {
+      const link = record.item.querySelector('a');
+      const title = link.textContent.replace(/^index\.php\//i, '').replace(/_/g, ' ').trim();
+      const key = normalize(title);
+      if (!record.text.trim() || title.includes(':') || key === 'strona glowna' ||
+          /nie ma jeszcze artykułu o tym tytule/i.test(record.text)) continue;
+      const existing = candidates.get(key);
+      if (!existing || !/^index\.php\//i.test(link.textContent)) candidates.set(key, link.getAttribute('href'));
+    }
+    const urls = [...candidates.values()];
+    if (urls.length) location.replace(new URL(urls[Math.floor(Math.random() * urls.length)], location.href).href);
+  }
+
   const status = document.querySelector('#result-count');
   const empty = document.querySelector('#no-results');
   const update = () => {
@@ -35,7 +53,6 @@ if (input) {
   let timer;
   input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(update, 120); });
   input.addEventListener('keydown', event => { if (event.key === 'Escape') { clearTimeout(timer); input.value = ''; update(); } });
-  const params = new URLSearchParams(location.search);
   input.value = params.get('search') || params.get('q') || '';
   update();
 }

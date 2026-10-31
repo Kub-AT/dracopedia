@@ -12,7 +12,7 @@ The initial recovery accepted **978 archived HTML pages**, alongside **6 recover
 
 Pages were recovered from different Wayback Machine capture dates. The result is a collection of historical material, not a consistent snapshot of the wiki on one date. Article text remains in Polish.
 
-The archive includes local navigation between pages, recovered MediaWiki/Monobook presentation, a full-text searchable article catalog, and explanatory pages for content that could not be recovered. Newly written helper pages are explicitly marked **Kopia archiwalna · strona pomocnicza**.
+The archive includes local navigation between pages, recovered MediaWiki/Monobook presentation, a full-text searchable article catalog, random article navigation, and explanatory pages for content that could not be recovered. Newly written helper pages are explicitly marked **Kopia archiwalna · strona pomocnicza**.
 
 ## Browse locally
 
